@@ -33,7 +33,7 @@ exports.addProjects= async(req,res)=>{
 //home projects
 exports.getHomeProjects=async(req,res)=>{
     try{
-        const allProjects = await projects.find().limit(3)
+        const allProjects = await projects.find().limit(4)
         res.status(200).json(allProjects)
     }catch(err){
         res.status(401).json(err)
